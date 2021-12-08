@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1908">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <header>
+            <div class="navigation-bar">
+                <div class="logo-name">
+                    <h3>Lepessov Daulet</h3>
+                </div>
+                <div class="nav">
+                    <a href="#" class="button" id="events">ABOUT ME</a>
+                    <a href="#" class="button2" id="events">PORTFOLIO</a>
+                    <a href="#">LIST</a>
+                </div>
+            </div>
+            
+            
+
+        </header>
+
+        <main>
+                
+                <div class="video">
+                    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                        <source src="video/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="container">
+                    <div class="conatiner_inner">
+                        <div class="ava">
+                            <img v-bind:src="picture" v-bind:alt="firstName">
+                        </div>
+                        <div class="info">
+                            <h1>{{firstName}} {{lastName}}</h1>
+                            <h3>Email: {{email}}</h3>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="thoughts">
+                    <p v-if="status">{{thought}}</p>
+                    <p v-else>{{introduction}}</p>
+                </div>
+    
+                <div class="title">
+                    <h1>My projects</h1>
+                </div>
+                <div class="projects ">
+                    <div v-bind:class="{ active:notActive } " id="p1">
+                        <a href="#">
+                            <div class="logo">
+                                <img :src="project_1" alt="">
+                            </div>
+                            <div class="p-info">
+                                <h3>{{title_1}}</h3>
+                                <P>{{comment_1}}</P>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <div v-bind:class="{ active:notActive } " id="p2">
+                        <a href="#">
+                            <div class="logo">
+                                <img :src="project_2" alt="">
+                            </div>
+                            <div class="p-info">
+                                <h3>{{title_2}}</h3>
+                                <P>{{comment_2}}</P>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <div v-bind:class="{ active:notActive } " id="p3">
+                        <a href="#">
+                            <div class="logo">
+                                <img :src="project_3" alt="">
+                            </div>
+                            <div class="p-info">
+                                <h3>{{title_3}}</h3>
+                                <P>{{comment_3}}</P>
+                            </div>
+                        </a>
+                        
+                        
+                    </div>
+                </div>   
+        </main>
+        <footer>
+            <div class="contact">
+                <table>
+                    <tr>
+                       <th>Contact me</td>
+                        <th>Usefull links</td>
+                    </tr>
+                    <tr>
+                        <td>email: {{email}}</td>
+                        <td><a href="#" class="button" id="events">Portfolio</a></td>
+                    </tr>
+                    <tr>
+                        <td>Number: {{number}}</td>
+                        <td><a href="#" class="button2" id="events">About me</a></td>
+                    </tr>
+                    
+                </table>
+                
+            </div>
+        </footer>
+    </div>
+    
+
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js">    
+    </script>
+
+</body>
+</html>
